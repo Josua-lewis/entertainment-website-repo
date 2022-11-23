@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAE5G | Home</title>
+    <link rel="stylesheet" href="home_page.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function(){
+            $("a").on('click', function(event){
+                if (this.hash !== ""){
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({scrollTop:$(hash).offset().top}, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });    
+    </script>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="main">
+            <h1 class="headings">WELCOME TO <br> V ENTERTAINMENT</h1>
+            <button type="button" class="btn" onclick="location.href= 'team_profile.html';" value="View Team">
+                View Team
+            </button>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1 class="headings">ABOUT</h1>
+         <div id="pic">
+            <img src="pictures\celebration.jpeg" alt="">
+            <div id="intro">
+                <h2>V ENTERTAINMENT</h2>
+                <p>We as V Entertainment, specialize in big events, to club house parties
+                    to new year celebrations. If you can visualize it we can make it happen.
+                     What makes us different than other companies is that we specialize in
+                     visual effects. We have done bussiness with USA, Tokyo, UAE, London and many more
+                     countries in achieving a new year sky lighting firework effext. We are a
+                     international company that was established in the 1984.
+                     Countries rely on us to make their national day, a day to remember.
+                    <br><br>
+                     VISUALIZE YOUR FUN WITH V ENTERTAINMENT!
+                </p> 
+             </div>
+            </div>
+    </section>
+
+    <section id="portfolio">
+        <h1 class="headings">PORTFOLIO</h1>
+        <div class="gallery">
+            <img src="pictures\images(1).jpeg" alt="">
+            <img src="pictures\images.jpeg" alt="">
+            <img src="pictures\Private-Party-8.png" alt="">
+            <img src="pictures\Geo-Furniture-1.jpg" alt="">
+            <img src="pictures\Private-Party-6.png" alt="">
+            <img src="pictures\Private-Party-20.png" alt="">
+        </div>
+    </section>
+
+    <section id="services">
+        <h1 class="headings">SERVICES</h1>
+        <div class="row">
+            <div class="box">
+                <img src="pictures\catering.jpeg" alt="">
+                <h1 class="headings">CATERING</h1>
+                <p>Our aim is to satisfy our customers in only providing the best service.
+                    Anything our customers want we provide them with catering service is to prepare 
+                    foods and beverages to be served at an event.</p>
+            </div>
+            <div class="box">
+                <img src="pictures\decor.jpeg" alt="">
+                <h1 class="headings">DECOR</h1>
+                <p>Your event can be less stressful and 
+                focused on guest with assistance of decor service.Our aim is to make the event
+                memorable and also to be used again in future gatherings.</p>
+            </div>
+            <div class="box">
+                <img src="pictures\dj.jpeg" alt="">
+                <h1 class="headings">DJ</h1>
+                <p>Our package also entail a free DJ at our cost for the event.We supply you
+                    with music ,entertainment and a memorable time you will always remember.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="headings">CONTACT</h1>
+        <form action="" class="form">
+            <input type="text" name="email" class="input" placeholder="Enter Your Name">
+            <input type="text" name="email" class="input" 
+            placeholder="Enter Your Email">
+            <textarea name="msg" id="msg" cols="30" rows="10"
+            placeholder="Enter Your Message"></textarea>
+            <input type="submit" value="SEND" id="send">
+        </form>
+
+    </section>
+
+    <div id = "copyright">
+        <p>@ 2005-2022 Copyright V Entertainment. All Rights Reserved. V Entertainment (Pty) Ltd is a registered event management company.</p>
+    </div>
+
+</body>
+</html>
